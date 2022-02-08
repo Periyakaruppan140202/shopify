@@ -8,10 +8,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        amazon_blue: {
-          light: "#232F3E",
-          DEFAULT: "#131921",
+        shopzone_blue: {
+          light: "#4c6585",
+          DEFAULT: "#083B66",
         },
+        light_green: "#74D14C",
+        normal_green: "#008000",
+        gray_color: "#EAEDED",
       },
     },
   },
