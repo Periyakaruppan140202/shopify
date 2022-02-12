@@ -23,6 +23,27 @@ const Banner = () => {
         <div>
           <img loading="lazy" src="../images/banner3.jpg" alt="" />
         </div>
+        <div>
+          <img loading="lazy" src="../images/banner4.jpg" alt="" />
+        </div>
+        <div>
+          <img loading="lazy" src="../images/banner5.jpg" alt="" />
+        </div>
+        <div>
+          <img loading="lazy" src="../images/banner6.jpg" alt="" />
+        </div>
+        <div>
+          <img loading="lazy" src="../images/banner7.jpg" alt="" />
+        </div>
+        <div>
+          <img loading="lazy" src="../images/banner8.jpg" alt="" />
+        </div>
+        <div>
+          <img loading="lazy" src="../images/banner9.jpg" alt="" />
+        </div>
+        <div>
+          <img loading="lazy" src="../images/banner3.jpg" alt="" />
+        </div>
       </Carousel>
     </div>
   );
