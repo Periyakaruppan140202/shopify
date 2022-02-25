@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import logo from "../../public/images/shopzone-logo-nobg.png";
 import { useRouter } from "next/router";
-import { useSession, signIn, signOut } from "next-auth/react";
+import { useSession, signIn, signOut } from "next-auth/client";
 
 import {
   MenuIcon,
@@ -13,7 +13,7 @@ import { useSelector } from "react-redux";
 import { selectItems, selectLength } from "../slices/cartSlice";
 const Header = ({ search, setSearch }) => {
   const length = useSelector(selectLength);
-  const { data: session } = useSession();
+  const [session] = useSession();
   const router = useRouter();
   const items = useSelector(selectItems);
   let [searchkey, setSearchKey] = useState("");

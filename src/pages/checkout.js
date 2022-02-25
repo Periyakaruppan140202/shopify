@@ -6,10 +6,10 @@ import { selectItems, selectTotal, selectLength } from "../slices/cartSlice";
 import emptycart from "../../public/images/emptycart.png";
 import Image from "next/image";
 import Currency from "react-currency-formatter";
-import { useSession } from "next-auth/react";
+import { useSession } from "next-auth/client";
 
 const Checkout = () => {
-  const { data: session } = useSession();
+  const [session] = useSession();
   const items = useSelector(selectItems);
   const length = useSelector(selectLength);
   const total = useSelector(selectTotal);
