@@ -19,9 +19,10 @@ const ProductFeed = ({ products, search }) => {
     >
       {newProducts
         .slice(0, 4)
-        .map(({ id, title, price, description, image }) => (
+        .map(({ _id, title, price, description, image }) => (
           <Product
-            key={id}
+            key={_id}
+            id={_id}
             image={image}
             title={title}
             price={price}
@@ -31,9 +32,10 @@ const ProductFeed = ({ products, search }) => {
       <div className="sm:col-span-2">
         {newProducts
           .slice(4, 5)
-          .map(({ id, title, price, description, image }) => (
+          .map(({ _id, title, price, description, image }) => (
             <Product
-              key={id}
+              key={_id}
+              id={_id}
               image={image}
               title={title}
               price={price}
@@ -43,9 +45,10 @@ const ProductFeed = ({ products, search }) => {
       </div>
       {newProducts
         .slice(5, products.length)
-        .map(({ id, title, price, description, image }) => (
+        .map(({ _id, title, price, description, image }) => (
           <Product
-            key={id}
+            key={_id}
+            id={_id}
             image={image}
             title={title}
             price={price}

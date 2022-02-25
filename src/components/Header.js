@@ -2,14 +2,20 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import logo from "../../public/images/shopzone-logo-nobg.png";
 import { useRouter } from "next/router";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 import {
   MenuIcon,
   SearchIcon,
   ShoppingCartIcon,
 } from "@heroicons/react/outline";
+import { useSelector } from "react-redux";
+import { selectItems, selectLength } from "../slices/cartSlice";
 const Header = ({ search, setSearch }) => {
+  const length = useSelector(selectLength);
+  const { data: session } = useSession();
   const router = useRouter();
+  const items = useSelector(selectItems);
   let [searchkey, setSearchKey] = useState("");
   const handleChange = (e) => {
     setSearchKey(e.target.value);
@@ -17,13 +23,15 @@ const Header = ({ search, setSearch }) => {
   const searchItem = () => {
     setSearch(searchkey);
   };
-  // useEffect(() => {
-  //   // Always do navigations after the first render
-  // }, []);
-  // useEffect(() => {
-  //   // The counter changed!
-  //   router.push("/?counter=10", undefined, { shallow: true });
-  // }, [router.query.counter]);
+  if (typeof window === "object") {
+    const input = document.getElementById("search");
+    input.addEventListener("keyup", (event) => {
+      if (event.key == "Enter") {
+        event.preventDefault();
+        searchItem();
+      }
+    });
+  }
   return (
     <header>
       {/* Top Nav */}
@@ -36,13 +44,17 @@ const Header = ({ search, setSearch }) => {
             objectFit="contain"
             className="cursor-pointer"
             onClick={() => {
-              router.reload(window.location.pathname);
+              setSearchKey("");
+              setSearch ? setSearch("") : "";
+              router.push("/");
             }}
           ></Image>
           <div
             className="hidden sm:flex flex-grow item-center p-2 pr-5 font-bold text-light_green cursor-pointer hover:text-normal_green"
             onClick={() => {
-              router.reload(window.location.pathname);
+              setSearchKey("");
+              setSearch ? setSearch("") : "";
+              router.push("/");
             }}
           >
             <h1>Shopify</h1>
@@ -67,17 +79,24 @@ const Header = ({ search, setSearch }) => {
         </div>
         {/* Right */}
         <div className="text-white flex items-center text-xs space-x-6 mx-6 whitespace-nowrap">
-          <div className="link">
-            <p>Hello, Periyakaruppan</p>
+          <div onClick={!session ? signIn : signOut} className="link w-28">
+            <p className="truncate">
+              {session ? `Hello, ${session.user.name}` : "Sign In"}
+            </p>
             <p className="font-extrabold md:text-sm">Account & Lists</p>
           </div>
           <div className="link">
             <p>Returns</p>
             <p className="font-extrabold md:text-sm"> & Orders</p>
           </div>
-          <div className="relative link flex items-center">
+          <div
+            onClick={() => {
+              router.push("/checkout");
+            }}
+            className="relative link flex items-center"
+          >
             <span className="absolute top-0 right-0 md:right-7 h-4 w-4 text-center rounded-full text-black font-bold bg-light_green">
-              0
+              {length}
             </span>
             <ShoppingCartIcon className="h-10" />
             <p className="font-extrabold md:text-sm hidden mt-2 md:inline">

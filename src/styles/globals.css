@@ -7,6 +7,9 @@
     @apply cursor-pointer hover:underline;
   }
   .button {
-    @apply cursor-pointer text-xs md:text-sm bg-gradient-to-b  from-green-400 to-green-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 active:from-green-500;
+    @apply cursor-pointer text-xs md:text-sm bg-gradient-to-b  from-green-400 to-green-300 p-2 rounded-md focus:outline-none active:ring-2 focus:ring-green-500;
+  }
+  .redbutton {
+    @apply cursor-pointer text-xs md:text-sm bg-gradient-to-b  from-red-400 to-red-300 p-2 rounded-md focus:outline-none active:ring-2 focus:ring-red-500;
   }
 }
