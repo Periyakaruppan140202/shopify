@@ -7,8 +7,27 @@ import emptycart from "../../public/images/emptycart.png";
 import Image from "next/image";
 import Currency from "react-currency-formatter";
 import { useSession } from "next-auth/client";
+import { loadStripe } from "@stripe/stripe-js";
+import axios from "axios";
+const stripePromise = loadStripe(process.env.stripe_public_key);
 
 const Checkout = () => {
+  const createCheckoutSession = async () => {
+    const stripe = await stripePromise;
+
+    //call the backend to create a checkout session of stripe
+    const checkoutSession = await axios.post("/api/create-checkout-session", {
+      items: items,
+      email: session.user.email,
+    });
+
+    //Redirect user to Stripe Checkout page
+    const result = await stripe.redirectToCheckout({
+      sessionId: checkoutSession.data.id,
+    });
+
+    if (result.error) alert(result.error.message);
+  };
   const [session] = useSession();
   const items = useSelector(selectItems);
   const length = useSelector(selectLength);
@@ -66,6 +85,8 @@ const Checkout = () => {
                 </span>
               </h2>
               <button
+                role="link"
+                onClick={createCheckoutSession}
                 disabled={!session}
                 className={`button mt-2 whitespace-nowrap ${
                   !session &&

@@ -22,6 +22,7 @@ const CheckOutProduct = ({ id, title, price, description, image, qty }) => {
   //   };
   const removeItemFromCart = () => {
     console.log(id);
+    confirm("Do you want to Remove this item from the cart?");
     dispatch(removeFromCart({ id }));
   };
   return (
@@ -36,9 +37,11 @@ const CheckOutProduct = ({ id, title, price, description, image, qty }) => {
       {/* Middle */}
       <div className="col-span-3 mx-5">
         <p className="line-clamp-2">{title}</p>
-        <p className="text-xs my-2 line-clamp-3">{description}</p>
-        <div className="flex my-5">
-          <span className="text-xs inline my-auto">Qty: </span>
+        <p className="invisible sm:visible text-xs sm:my-2 -my-2 line-clamp-3">
+          {description}
+        </p>
+        <div className="sm:flex sm:my-5">
+          <span className="text-xs my-auto">Qty: </span>
           <span className="mx-2 py-1 text-xs border rounded-md my-auto bg-gray-200 shadow-lg select-none">
             <MinusCircleIcon
               height={20}
@@ -70,7 +73,7 @@ const CheckOutProduct = ({ id, title, price, description, image, qty }) => {
             />
           </span>
           <button
-            className="redbutton flex my-auto ml-5 shadow-lg"
+            className="redbutton flex sm:my-auto mt-5 sm:ml-5 shadow-lg"
             onClick={removeItemFromCart}
           >
             <TrashIcon height={15} className="inline my-auto" /> Delete
@@ -79,7 +82,7 @@ const CheckOutProduct = ({ id, title, price, description, image, qty }) => {
       </div>
       {/* Right */}
       <div className="flex flex-col justify-self-end whitespace-nowrap font-bold">
-        <Currency quantity={price * qty} currency="INR" />
+        <Currency quantity={price} currency="INR" />
         {/* <button className="button" onClick={addItemToCart}>
           Add to Cart
         </button>
