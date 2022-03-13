@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import { useSelector } from "react-redux";
 import CheckOutProduct from "../components/CheckOutProduct";
 import Header from "../components/Header";
@@ -34,6 +35,10 @@ const Checkout = () => {
   const total = useSelector(selectTotal);
   return (
     <div className="bg-gray-100">
+      <Head>
+        <title>My Cart - Shopify</title>
+        <link rel="icon" href="/favicon.png" />
+      </Head>
       <Header />
       <main className="lg:flex max-w-screen-2xl mx-auto">
         {/* Left */}

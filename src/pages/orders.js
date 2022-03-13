@@ -1,4 +1,5 @@
 import moment from "moment";
+import Head from "next/head";
 import { useSession, getSession } from "next-auth/client";
 import React from "react";
 import db from "../../firebase";
@@ -10,6 +11,10 @@ const orders = ({ orders }) => {
   console.log(orders);
   return (
     <div>
+      <Head>
+        <title>My Orders - Shopify</title>
+        <link rel="icon" href="/favicon.png" />
+      </Head>
       <Header />
       <main className="max-w-screen-lg mx-auto p-10">
         <h1 className="text-3xl border-b mb-2 pb-1 border-green-400">
