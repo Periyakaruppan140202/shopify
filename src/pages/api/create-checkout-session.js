@@ -4,7 +4,7 @@ export default async (req, res) => {
   const url = "https://shopify-seller-backend.herokuapp.com/image/";
   const { items, email } = req.body;
   const transformedItems = items.map((item) => {
-    console.log(url + item.image);
+    // console.log(url + item.image);
     return {
       // description: item.description,
       quantity: item.qty,
@@ -33,6 +33,6 @@ export default async (req, res) => {
       images: JSON.stringify(items.map((item) => url + item.image)),
     },
   });
-  console.log(JSON.stringify(items.map((item) => url + item.image)));
+  // console.log(JSON.stringify(items.map((item) => url + item.image)));
   res.status(200).json({ id: session.id });
 };

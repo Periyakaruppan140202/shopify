@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "shopify-auth-cbcb4",
+  "private_key_id": "624cd0a4aa2fab5d95869a2c0d09da09354aa8df",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEuwIBADANBgkqhkiG9w0BAQEFAASCBKUwggShAgEAAoIBAQCeza5kIUMic+QW\naHLC9tYeNyx3S72cFiEFOEEzdo9PwSIOSL+8Dvc5I7F+Ua8JmQtRIXsHvaplEjXj\nNSuLpiEhRFF1swVyja5pbXEa/t+ZiOKCiKNV0tMEGCFqhMzUvaQma0eC4IdZuGC7\nuLaczKm9UfKWIGDZiVqmfFovetiWkRO27b9/qASkjIr0O1CNmrUdo+Ufo3rds6xc\npEkXE9M6eUyFmNip9TehMS2/ybYUyj4+xk0avUgDYcHX75Kw86FHiQi4LCja7Nsx\n9o0d3GIiLtvluf3WVZbJ+JIpyFxavmGNRbDq52eE2+QSdAVXy4S4/ftFGXngMGkJ\nEDRycfirAgMBAAECgf8i1S7Qxurr2lgjXNPXVOvw6vPyJ3mTZ4aoaLEdZLXaOIep\nHqCQtRs+w61SzNoYR+daWgtZWje44o9Go7CUfUUS3m4Kz4pwAu+hislFxFLgaK+U\n/xTLBPiAnTXnPJ0NY9KB99DLJ8kBTfBR7fiXRPuyk5ng96u9Rx0X4vw4DW5bkQvZ\nw+ZJeB+FlXFJLg6s4klq6VuRgD4FjF1q7vv+vrunDYP+1WZfG+nb1Cfp5LiLxVds\nXkJvdcVllX+FqKbHKcDLVDCVBI0xYoMtpi4HEQ5dmSZmWLOvM8Lj44zp+ZY1s/lv\nCnTnJ0JAzreK4MxA/gv39ky4aYTWbk7ZepqokcECgYEA1hpIC9mDNVObkWICBxnv\nCnQiZ+Jteyk3TOImwTEAJ5gRLf30abvx+LPX8y500eV0T63avz7NAwY97NcJtt9G\nYUCNGfhSoOC5ruRy4NC9KHN4taohHoi6RRG+exer33BJIGU57RpM3/scdXtZGR6P\nPg44KhcsRtMkBoQhG0ZzNQsCgYEAveEfNai1I//1F51KYcUM1z7n7MQlAsSfwcvT\nmtwxDmS6GLcXrEw7IiixCa4Rpbz2vvoeaTs+npmWCKlXsUqh2CqCX4FGcl8+BNUP\nYD/H+u5W3qPmedhhz5mCSbXK191p9JOONuZ+J+SH0zDRKlM9EjmJA38ctBr0RFtk\nRu11TuECgYEAssmZlkOZ/MMHqtzkApgWdG1MeeGsOOfPJSXI5RUNIwMqfXSPUGhB\nBMTxtUH7DXgFq6/rdj50Jm1k8s0TcKF8fSPRcHlcTrm6dSCSCchl3Uyn5VPfekcE\n/T53CQVYYiq69hFx0Nxgi71/I1/QpFhPl6t6HTPipnYUpFhb6RHojMcCgYAkWLCB\ns/6gmoFO+OPhHTgdB8SbdNxk0ECIdzzVOusFB1D8JCga6iiznDhvUuu73xUYb4Zc\nvGN7NokatVe87z1VxKVaJMPYZtTXVfVwhiUAqpjkW1ll336xn3/qHitq8M40a/5g\nEfT6K+u4CHMxd+eL0omgqrdS3on9f8UNMq0u4QKBgB4i7RxWTZ1+GUdcSfoqWqsp\nZFWblw0+eZcVrxJ+M7Z0QBW/b28VdZvCyAG5vZTo+qj329DOTrGtq+gjI1CYJTAD\nbnXBtT6yOZIjWHQjCj+122Cq93LxFN6RwrcFK/8zDi0lU5h25UKcfDv5pwzYzlsH\n1dcY1JUxCPfuce2w20E+\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-y10sl@shopify-auth-cbcb4.iam.gserviceaccount.com",
+  "client_id": "114999703846312810351",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-y10sl%40shopify-auth-cbcb4.iam.gserviceaccount.com"
+}

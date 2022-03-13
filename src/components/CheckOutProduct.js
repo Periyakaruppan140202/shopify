@@ -21,7 +21,6 @@ const CheckOutProduct = ({ id, title, price, description, image, qty }) => {
   //     dispatch(addToCart(product));
   //   };
   const removeItemFromCart = () => {
-    console.log(id);
     confirm("Do you want to Remove this item from the cart?");
     dispatch(removeFromCart({ id }));
   };
