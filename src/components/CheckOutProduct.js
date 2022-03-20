@@ -21,8 +21,10 @@ const CheckOutProduct = ({ id, title, price, description, image, qty }) => {
   //     dispatch(addToCart(product));
   //   };
   const removeItemFromCart = () => {
-    confirm("Do you want to Remove this item from the cart?");
-    dispatch(removeFromCart({ id }));
+    if (confirm("Do you want to Remove this item from the cart?")) {
+      dispatch(removeFromCart({ id }));
+    } else {
+    }
   };
   return (
     <div className="grid grid-cols-5 border-b pb-4">
