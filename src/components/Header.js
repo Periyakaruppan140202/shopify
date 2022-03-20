@@ -32,6 +32,9 @@ const Header = ({ search, setSearch }) => {
       }
     });
   }
+  const goToProfile = () => {
+    router.push("/profile");
+  };
   return (
     <header>
       {/* Top Nav */}
@@ -79,7 +82,7 @@ const Header = ({ search, setSearch }) => {
         </div>
         {/* Right */}
         <div className="text-white flex items-center text-xs space-x-6 mx-6 whitespace-nowrap">
-          <div onClick={!session ? signIn : signOut} className="link w-28">
+          <div onClick={!session ? signIn : goToProfile} className="link w-28">
             <p className="truncate">
               {session ? `Hello, ${session.user.name}` : "Sign In"}
             </p>

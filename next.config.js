@@ -4,6 +4,8 @@ module.exports = {
       "fakestoreapi.com",
       "localhost",
       "shopify-seller-backend.herokuapp.com",
+      "*.com",
+      "lh3.googleusercontent.com",
     ],
   },
   env: {

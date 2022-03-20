@@ -10,7 +10,7 @@ const orders = ({ orders }) => {
   const [session] = useSession();
   console.log(orders);
   return (
-    <div>
+    <div className="">
       <Head>
         <title>My Orders - Shopify</title>
         <link rel="icon" href="/favicon.png" />
